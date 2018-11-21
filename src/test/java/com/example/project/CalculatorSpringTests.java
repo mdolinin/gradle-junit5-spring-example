@@ -16,7 +16,7 @@ class CalculatorSpringTests {
         calculator.add(1, 1);
     }
 
-    @RepeatedTest(100)
+    @RepeatedTest(1000)
     void addsTwoNumbersUsingSpring(@Autowired Calculator calculator) {
         assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
     }

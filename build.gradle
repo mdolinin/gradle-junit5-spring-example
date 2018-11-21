@@ -20,6 +20,9 @@ dependencies {
 test {
 	useJUnitPlatform()
 	testLogging {
-		events "passed", "skipped", "failed"
+        events "failed"
+        exceptionFormat "full"
 	}
+    systemProperties['junit.jupiter.execution.parallel.enabled'] = true
+    systemProperties['junit.jupiter.execution.parallel.config.dynamic.factor'] = 10
 }
